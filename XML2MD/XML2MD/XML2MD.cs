@@ -16,6 +16,7 @@ namespace XML2MD
             {
                 Console.WriteLine("Usage: XML2MD.exe <xml file> [<output file>]");
                 Console.WriteLine("If output file is not specified, output will print to console.");
+                return;
             }
             var xml = File.ReadAllText(args[0]);
             var doc = XDocument.Parse(xml);
