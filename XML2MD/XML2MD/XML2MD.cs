@@ -12,10 +12,21 @@ namespace XML2MD
     {
         static void Main(string[] args)
         {
+            if(args.Length != 2 && args.Length != 1)
+            {
+                Console.WriteLine("Usage: XML2MD.exe <xml file> [<output file>]");
+                Console.WriteLine("If output file is not specified, output will print to console.");
+            }
             var xml = File.ReadAllText(args[0]);
             var doc = XDocument.Parse(xml);
             var md = doc.Root.ToMarkDown();
-            Console.WriteLine(md);
+        }
+        private static void _writeFile(string filename, string markdown)
+        {
+            using (var writer = new StreamWriter(filename))
+            {
+                writer.Write(markdown);
+            }
         }
     }
 
