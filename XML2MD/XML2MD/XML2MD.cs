@@ -6,7 +6,7 @@ using System.Text.RegularExpressions;
 using System.Xml;
 using System.Xml.Linq;
 
-namespace GithubWikiDoc
+namespace XML2MD
 {
     class Program
     {
