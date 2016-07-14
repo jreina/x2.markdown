@@ -20,6 +20,11 @@ namespace XML2MD
             var xml = File.ReadAllText(args[0]);
             var doc = XDocument.Parse(xml);
             var md = doc.Root.ToMarkDown();
+
+            if(args.Length == 2 && !string.IsNullOrWhiteSpace(args[1]))
+            {
+                _writeFile(args[1], md);
+            }
         }
         private static void _writeFile(string filename, string markdown)
         {
