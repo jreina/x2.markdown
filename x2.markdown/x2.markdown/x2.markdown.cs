@@ -25,6 +25,9 @@ namespace x2markdown
             if(args.Length == 2 && !string.IsNullOrWhiteSpace(args[1]))
             {
                 _writeFile(args[1], md);
+            } else
+            {
+                Console.Write(md);
             }
         }
         private static void _writeFile(string filename, string markdown)
