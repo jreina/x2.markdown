@@ -7,8 +7,8 @@
     <ProjectGuid>{AD072597-C373-457B-98E4-13E7C6AC5FA7}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>XML2MD</RootNamespace>
-    <AssemblyName>XML2MD</AssemblyName>
+    <RootNamespace>x2markdown</RootNamespace>
+    <AssemblyName>x2.markdown</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -43,7 +43,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="XML2MD.cs" />
+    <Compile Include="x2.markdown.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

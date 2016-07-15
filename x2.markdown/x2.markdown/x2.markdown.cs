@@ -6,7 +6,7 @@ using System.Text.RegularExpressions;
 using System.Xml;
 using System.Xml.Linq;
 
-namespace XML2MD
+namespace x2markdown
 {
     class Program
     {
