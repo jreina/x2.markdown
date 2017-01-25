@@ -57,6 +57,7 @@ namespace x2markdown
                     {"seePage", "[[{1}|{0}]]"},
                     {"seeAnchor", "[{1}]({0})"},
                     {"param", "|Name | Description |\n|-----|------|\n|{0}: |{1}|\n" },
+                    {"typeparam", "|Name | Description |\n|-----|------|\n|{0}: |{1}|\n" },
                     {"exception", "[[{0}|{0}]]: {1}\n\n" },
                     {"returns", "Returns: {0}\n\n"},
                     {"none", ""}
@@ -83,6 +84,7 @@ namespace x2markdown
                     {"seePage", x=> d("cref", x) },
                     {"seeAnchor", x=> { var xx = d("cref", x); xx[0] = xx[0].ToLower(); return xx; }},
                     {"param", x => d("name", x) },
+                    {"typeparam", x => d("name", x) },
                     {"exception", x => d("cref", x) },
                     {"returns", x => new[]{x.Nodes().ToMarkDown()}},
                     {"none", x => new string[0]}
