@@ -125,8 +125,7 @@ namespace x2markdown
                 return str;
             }
 
-            if(e.NodeType==XmlNodeType.Text)
-                return Regex.Replace( ((XText)e).Value.Replace('\n', ' '), @"\s+", " ");
+            if (e.NodeType == XmlNodeType.Text) return ((XText)e).Value;
 
             return "";
         }
